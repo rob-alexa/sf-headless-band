@@ -1,0 +1,5 @@
+{
+  "name": "sf-headless-band",
+  "owner": { "name": "Rob Alexander" },
+  "plugins": [{ "name": "sf-headless-band", "source": "./" }]
+}

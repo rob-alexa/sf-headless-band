@@ -1,0 +1,43 @@
+{
+  "name": "sf-headless-band",
+  "version": "0.1.0",
+  "description": "Shows your Salesforce default org and the Salesforce MCP servers Claude can reach, with each org's type and scratch org expiry, above the prompt",
+  "author": {
+    "name": "Dave Norris",
+    "url": "https://github.com/deejay-hub"
+  },
+  "homepage": "https://github.com/rob-alexa/sf-headless-band",
+  "repository": "https://github.com/rob-alexa/sf-headless-band",
+  "license": "MIT",
+  "keywords": ["salesforce", "sfdx", "mcp", "mod"],
+  "types": "./types/index.d.ts",
+  "userConfig": {
+    "sharedSandboxes": {
+      "type": "string",
+      "multiple": true,
+      "title": "Shared sandboxes",
+      "description": "My Domain names of sandboxes a whole team shares, the part of the URL before the first dot (acme--uat). Their names show in yellow and their pills carry the shared sandbox label.",
+      "default": []
+    },
+    "sharedSandboxLabel": {
+      "type": "string",
+      "title": "Shared sandbox label",
+      "description": "The words on a shared sandbox's pill.",
+      "default": "shared sandbox"
+    },
+    "gates": {
+      "type": "string",
+      "multiple": true,
+      "title": "Review gates",
+      "description": "Commit statuses that stand for a person's step, each as status=words (qa-gate=QA open). The PR line shows the words while the status has not passed and leaves it out of the checks' counts.",
+      "default": []
+    },
+    "sfWrappers": {
+      "type": "string",
+      "multiple": true,
+      "title": "Salesforce CLI wrappers",
+      "description": "Commands that wrap the Salesforce CLI, by name (sfw). The last target reads their -o and --target-org as it does for sf.",
+      "default": []
+    }
+  }
+}
